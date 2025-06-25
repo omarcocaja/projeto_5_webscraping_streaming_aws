@@ -1,0 +1,7 @@
+openai
+trafilatura
+boto3
+pandas
+pyarrow
+dotenv
+requests

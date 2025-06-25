@@ -1,0 +1,12 @@
+# Build da imagem
+docker build --no-cache -t lambda-bbc-bronze .
+
+# Login no ECR
+aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin <seu_id_amazon>>.dkr.ecr.us-east-2.amazonaws.com
+
+# Tag da imagem
+docker tag lambda-bbc-bronze:latest <path_ecr>
+
+# Push
+docker push <path_ecr>
+
